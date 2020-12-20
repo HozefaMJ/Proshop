@@ -1,9 +1,7 @@
 import mongoose from 'mongoose'
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 429cb965a902f82539a31154dd51fb866cd783ed
+
 const connectDB = async () => {
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI, {
