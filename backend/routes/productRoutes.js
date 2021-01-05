@@ -2,7 +2,7 @@ import express from "express";
 const router = express.Router()
 
 // Controllers
-import { createProduct, deleteProduct, getProductById, getProducts, updateProduct } from "../controllers/productController.js";
+import { createdProductReview, createProduct, deleteProduct, getProductById, getProducts, updateProduct } from "../controllers/productController.js";
 
 // Models
 //import Product from "../models/productModel.js";
@@ -14,6 +14,8 @@ router
     .route('/')
     .get(getProducts)
     .post(protect,admin,createProduct)
+
+router.route('/:id/reviews').post(protect,createdProductReview);
 
 router
     .route('/:id')
