@@ -30,6 +30,6 @@ router
     .delete(protect,admin,deleteProduct)
     .put(protect,admin,updateProduct)
 
-router.get('/top', getTopProducts)
+router.get('/top', getTopProducts) //Error
 
 export default router;
