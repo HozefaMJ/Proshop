@@ -3,7 +3,7 @@ import {Button, Row, Col, ListGroup, Image, Card} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {useDispatch,useSelector} from "react-redux";
 import Message from "../components/Message";
-import {saveShippingAddress} from "../actions/cartActions";
+//import {saveShippingAddress} from "../actions/cartActions";
 import CheckoutSteps from "../components/CheckoutSteps";
 import {createOrder} from "../actions/orderActions";
 

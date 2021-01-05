@@ -65,7 +65,7 @@ const OrderScreen = ({match, history}) => {
         if(!order || order._id !== orderId){
             dispatch(getOrderDetails(orderId))
         }
-    }, [dispatch,order, orderId, successPay, successDeliver])
+    }, [dispatch,order, orderId,userInfo,history, successPay, successDeliver])
 
 
     if(!loading){

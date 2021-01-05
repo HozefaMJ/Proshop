@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import {LinkContainer} from "react-router-bootstrap";
-import {Button,Table} from "react-bootstrap";
+import {Table} from "react-bootstrap";
 import {useDispatch,useSelector} from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
@@ -57,7 +57,7 @@ const OrderListScreen = ({history}) => {
                                 <td>
                                     <LinkContainer to={`/order/${order._id}`}>
                                         
-                                        <a>
+                                        <a href="/">
                                             <i className='fas fa-info-circle'></i>
                                         </a>
                                         {/*

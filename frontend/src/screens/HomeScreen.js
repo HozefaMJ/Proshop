@@ -13,7 +13,7 @@ import { listProducts } from "../actions/productActions";
 // Dummy Data File
 //import products from '../products'
 
-const HomeScreen = () => {
+const HomeScreen = ({match}) => {
 
     /*
     For Component Level State
@@ -29,6 +29,8 @@ const HomeScreen = () => {
     }, [])
     */
 
+    const keyword = match.params.keyword
+
     // Through Reducer App Level State
     const dispatch = useDispatch()
 
@@ -37,8 +39,8 @@ const HomeScreen = () => {
 
 
     useEffect(()=>{
-        dispatch(listProducts())
-    }, [dispatch])
+        dispatch(listProducts(keyword))
+    }, [dispatch, keyword])
 
     
 
