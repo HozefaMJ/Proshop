@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import { useDispatch, useSelector } from "react-redux";
-
+import {Link} from "react-router-dom";
 import { Row,Col } from 'react-bootstrap'
 //import axios from 'axios';
 // Custom Components
@@ -11,6 +11,7 @@ import Paginate from "../components/Paginate";
 // Actions
 import { listProducts } from "../actions/productActions";
 import ProductCarousal from '../components/ProductCarousal';
+import Meta from '../components/Meta';
 
 // Dummy Data File
 //import products from '../products'
@@ -49,7 +50,8 @@ const HomeScreen = ({match}) => {
 
     return (
         <>
-        {!keyword && <ProductCarousal/>}
+        <Meta title="proshop | Home" keywords="Electronics light" description="We sell electronics"/>
+        {!keyword ? <ProductCarousal/> : <Link to="/" className="btn btn-light">Go Back</Link>}
           <h1>Latest products</h1>
           {loading ? (
             <Loader/>
