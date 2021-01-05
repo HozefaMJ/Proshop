@@ -10,6 +10,7 @@ import Loader from "../components/Loader";
 import Paginate from "../components/Paginate";
 // Actions
 import { listProducts } from "../actions/productActions";
+import ProductCarousal from '../components/ProductCarousal';
 
 // Dummy Data File
 //import products from '../products'
@@ -48,6 +49,7 @@ const HomeScreen = ({match}) => {
 
     return (
         <>
+        {!keyword && <ProductCarousal/>}
           <h1>Latest products</h1>
           {loading ? (
             <Loader/>

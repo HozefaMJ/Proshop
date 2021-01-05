@@ -2,7 +2,14 @@ import express from "express";
 const router = express.Router()
 
 // Controllers
-import { createdProductReview, createProduct, deleteProduct, getProductById, getProducts, updateProduct } from "../controllers/productController.js";
+import {createdProductReview,
+        createProduct,
+        deleteProduct,
+        getProductById, 
+        getProducts, 
+        updateProduct,
+        getTopProducts
+    } from "../controllers/productController.js";
 
 // Models
 //import Product from "../models/productModel.js";
@@ -23,6 +30,6 @@ router
     .delete(protect,admin,deleteProduct)
     .put(protect,admin,updateProduct)
 
-
+router.get('/top', getTopProducts)
 
 export default router;
