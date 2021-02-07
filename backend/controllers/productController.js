@@ -97,7 +97,7 @@ const updateProduct = asyncHandler(async(req,res) => {
         res.status(404);
         throw new Error('Product Not Found')
     }
- })
+})
 
 
 // @desc Create new Review
