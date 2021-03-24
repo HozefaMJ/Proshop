@@ -52,7 +52,7 @@ const HomeScreen = ({match}) => {
         <>
         {/*<ProductCarousal/>*/}
         <Meta title="proshop | Home" keywords="Electronics light" description="We sell electronics"/>
-        {!keyword ? <h1>Hello</h1> : <Link to="/" className="btn btn-light">Go Back</Link>}
+        {!keyword ? <ProductCarousal/> : <Link to="/" className="btn btn-light">Go Back</Link>}
           <h1>Latest products</h1>
           {loading ? (
             <Loader/>

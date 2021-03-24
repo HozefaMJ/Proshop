@@ -22,6 +22,10 @@ router
     .get(getProducts)
     .post(protect,admin,createProduct)
 
+router
+    .route('/top')
+    .get(getTopProducts) //Error
+
 router.route('/:id/reviews').post(protect,createdProductReview);
 
 router
@@ -29,9 +33,5 @@ router
     .get(getProductById)
     .delete(protect,admin,deleteProduct)
     .put(protect,admin,updateProduct)
-
-router
-    .route('/top')
-    .get(getTopProducts) //Error
 
 export default router;
